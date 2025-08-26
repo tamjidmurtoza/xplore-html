@@ -1,0 +1,93 @@
+.cs_asia_gallery {
+    .container {
+        @media (min-width:1400px) {
+            max-width: 1240px;
+        }
+    }
+}
+.cs_search_icon_overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #1d1d1d -23.78%, rgba(29, 29, 29, 0) 100%);
+    opacity: 0;      
+ 
+    .cs_search_icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.3s ease;
+        opacity: 0;
+            }
+        }
+
+
+.cs_culture_journey {
+    width: 1080px;
+    height: 537px;
+    @media (max-width:1399px) {
+            width: 900px;
+        }
+    @media (max-width:1399px) {
+            width: 900px;
+        }
+    @media (max-width:1199px) {
+            width: 760px;
+        }
+    @media (max-width:991px) {
+            width: 560px;
+        }
+}
+
+.cs_culture_journey_wraper {
+     .draggable {
+        cursor: default !important;
+    }
+
+    >* .cs_left_arrow,
+    >* .cs_right_arrow {
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        z-index: 100;
+    }
+    .cs_left_arrow {
+        left: 0px;
+    }
+
+    .cs_right_arrow {
+        right: 0px;
+    }
+}
+
+.cs_culture_journey_location {
+    display: flex;
+    align-items: end;
+    height: 100%;
+    padding: 24px;
+}
+
+.cs_europe_journey_img {
+    width: 100%;
+    height: 329px;
+    transition: all .03s ease;
+    overflow: hidden;
+}
+.cs_video_block.cs_style_1.cs_type_1{
+    a{
+        cursor: pointer;
+    }
+} 
+ .cs_lightbox_item,
+ .cs_europe_journey_img{
+    &:hover {
+        .cs_search_icon_overlay {
+            opacity: 1;           
+            .cs_search_icon {
+                opacity: 1;
+            }
+        }
+    }}

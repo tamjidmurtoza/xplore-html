@@ -1,0 +1,60 @@
+.cs_testimonial.cs_style_1 {
+  border: 1px solid var(--primary);
+  border-radius: 25px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+
+  blockquote {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 24px;
+  }
+
+  .cs_avatar.cs_style_1 {
+    margin-top: auto;
+  }
+
+  @media (max-width: 991px) {
+    padding: 24px 20px 30px;
+  }
+}
+
+.cs_avatar.cs_style_1 {
+  display: flex;
+  align-items: center;
+  gap: 15px 20px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.4s ease;
+  transition-delay: 0.3s;
+
+  .cs_avatar_icon {
+    height: 48px;
+    width: 48px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+}
+
+.cs_testimonial_blockquote_icon {
+  height: 100%;
+  display: flex;
+  align-items: end;
+}
+
+
+.slick-active {
+  .cs_avatar.cs_style_1 {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

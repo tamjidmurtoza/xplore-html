@@ -1,0 +1,201 @@
+form {
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.cs_contact_section.cs_style_1 {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+
+  .cs_slider.cs_style_1 {
+    padding-bottom: 50px;
+  }
+
+  .cs_contact_form_wrapper {
+    max-width: 925px;
+    margin: 0 auto;
+    padding: 56px 50px;
+    border-radius: 25px;
+    background: linear-gradient(92deg, rgba(255, 255, 255, 0.60) 16.51%, rgba(255, 255, 255, 0.20) 94.64%);
+    backdrop-filter: blur(5px);
+    font-size: 16px;
+  }
+
+  .cs_form_checkbox_wraper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+
+  .cs_brand_section {
+    padding-top: 930px;
+  }
+
+  @media (max-width:1700px) {
+    .cs_brand_section {
+      padding-top: 800px;
+    }
+  }
+
+  @media (max-width:1600px) {
+    .cs_brand_section {
+      padding-top: 730px;
+    }
+  }
+
+  @media (max-width:991px) {
+    p {
+      br {
+        display: none;
+      }
+    }
+
+    .cs_contact_form_wrapper {
+      padding: 40px 30px;
+    }
+  }
+
+  @media (max-width:575px) {
+    .cs_contact_form_wrapper {
+      padding: 40px 20px;
+    }
+
+    .cs_custom_checkbox {
+      label {
+        padding-left: 35px;
+      }
+    }
+  }
+}
+
+.cs_form_field {
+  display: block;
+  width: 100%;
+  outline: 0;
+  border: 0;
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 16px;
+  background-color: transparent;
+  font-size: 16px;
+  color: var(--secondary);
+
+  &::placeholder {
+    color: var(--secondary);
+  }
+}
+
+.cs_custom_checkbox {
+  position: relative;
+
+  a {
+    position: relative;
+    z-index: 2;
+
+    &:hover {
+      color: var(--primary);
+      text-decoration: underline;
+    }
+  }
+
+  input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    cursor: pointer;
+
+    &:checked {
+      +label {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  label {
+    position: relative;
+    padding-left: 44px;
+    margin: 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 24px;
+      width: 24px;
+      border: 1px solid var(--primary);
+      border-radius: 5px;
+      left: 0;
+      top: 3px;
+    }
+
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 13px;
+      height: 9px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="13" height="9" viewBox="0 0 13 9" fill="none"><path d="M12.3243 0.175746C12.09 -0.058582 11.7101 -0.058582 11.4757 0.175746L4.28737 7.36419L1.52428 4.6011C1.28997 4.36677 0.910098 4.36679 0.675746 4.6011C0.441418 4.8354 0.441418 5.21528 0.675746 5.44961L3.86311 8.63692C4.09734 8.87122 4.4775 8.87106 4.71164 8.63692L12.3243 1.02428C12.5586 0.789973 12.5586 0.410074 12.3243 0.175746Z" fill="%23141414"/></svg>');
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      opacity: 0;
+    }
+  }
+}
+
+.cs_form.cs_style_2 {
+  padding: 0;
+
+  .cs_form_in {
+    background-color: var(--gray);
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 10px;
+
+    label {
+      display: block;
+    }
+
+    input {
+      border: none;
+      outline: none;
+      background-color: inherit;
+    }
+  }
+}
+
+.cs_package_select {
+  border: transparent;
+  background: transparent;
+  outline: none;
+  color: rgba(20, 20, 20, 0.5);
+  appearance: none;
+}
+
+.cs_dropdown {
+  right: 10px;
+}
+
+input,
+textarea {
+  color: rgba(20, 20, 20, 0.5);
+}
+
+cs_calculate_area,
+.cs_quantity_btn {
+  color: rgba(20, 20, 20, 0.5);
+}
+
+.cs_dropdown {
+  pointer-events: none;
+}
