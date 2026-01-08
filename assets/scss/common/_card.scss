@@ -1,4 +1,8 @@
-.cs_card.cs_style_1 {
+/*========================================================
+  09. Cards
+==========================================================*/
+.cs_card_style_1,
+.cs_card_style_2 {
   position: relative;
   overflow: hidden;
 
@@ -26,9 +30,11 @@
     width: 50px;
     border-radius: 50%;
     position: absolute;
-    background: linear-gradient(94deg,
-        rgba(255, 255, 255, 0.4) 33.35%,
-        rgba(255, 255, 255, 0.1) 91.75%);
+    background: linear-gradient(
+      94deg,
+      rgba(255, 255, 255, 0.4) 33.35%,
+      rgba(255, 255, 255, 0.1) 91.75%
+    );
     backdrop-filter: blur(5px);
     top: 16px;
     right: 16px;
@@ -51,7 +57,7 @@
     width: 100%;
     pointer-events: none;
 
-    >* {
+    > * {
       position: relative;
       z-index: 1;
     }
@@ -63,9 +69,11 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      background: linear-gradient(0deg,
-          #1d1d1d -23.78%,
-          rgba(29, 29, 29, 0) 100%);
+      background: linear-gradient(
+        0deg,
+        #1d1d1d -23.78%,
+        rgba(29, 29, 29, 0) 100%
+      );
     }
 
     .cs_card_details {
@@ -82,10 +90,41 @@
       }
     }
   }
+}
 
-  &.cs_type_1 {
-    .cs_card_info {
-      padding: 56px 24px 24px 24px;
+.cs_card_style_2 {
+  .cs_card_info {
+    padding: 56px 24px 24px 24px;
+
+    .cs_card_details {
+      align-items: flex-end;
     }
+  }
+
+  @media (max-width: 575px) {
+    .cs_card_info {
+      padding: 50px 15px 30px;
+    }
+  }
+}
+
+/*==========================================================
+ Grid Layouts Design
+============================================================*/
+.cs_grid_style_1 {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(3, 1fr);
+
+  @media (max-width: 1199px) {
+    gap: 24px;
+  }
+
+  @media (max-width: 991px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

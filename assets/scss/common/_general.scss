@@ -1,110 +1,11 @@
-/*--------------------------------------------------------------
-  4. General
-----------------------------------------------------------------*/
-// google fonts
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
+/*========================================================
+  03. General
+==========================================================*/
 
-// @for $i from 0 through 21 {
-//   .cs_mb_#{$i} {
-//     margin-bottom: $i + px;
-//   }
-// }
-
-// .cs_mb_24 {
-//   margin-bottom: 24px;
-// }
-
-// .cs_mb_28 {
-//   margin-bottom: 28px;
-// }
-
-// .cs_mb_40 {
-//   margin-bottom: 40px;
-// }
-
-// .cs_mb_48 {
-//   margin-bottom: 48px;
-// }
-
-// .cs_mb_64 {
-//   margin-bottom: 64px;
-// }
-
-// .cs_mb_80 {
-//   margin-bottom: 80px;
-// }
-
-// .cs_mt_7 {
-//   margin-top: 7px;
-// }
-
-// .cs_mt_18 {
-//   margin-top: 18px;
-// }
-
-// .cs_mt_25 {
-//   margin-top: 25px;
-// }
-
-// .cs_mb_32 {
-//   margin-bottom: 32px;
-// }
-
-// .cs_mt_28 {
-//   margin-top: 28px;
-// }
-
-// .cs_mt_56 {
-//   margin-top: 56px;
-// }
-
-// .cs_mt_68 {
-//   margin-top: 68px;
-// }
-// .cs_pr_90 {
-//   padding-right: 90px;
-// }
-
-// .cs_pr_16 {
-//   padding-right: 16px;
-// }
-
-// .cs_pb_50 {
-//   padding-bottom: 50px;
-// }
-
-
-
-// @for $i from 1 through 160 {
-//   .cs_pb_#{$i} {
-//     padding-bottom: $i + px;
-//   }
-// }
-
-// @media screen and (max-width: 991px) {
-//   @for $i from 1 through 70 {
-//     .cs_pb_lg_#{$i} {
-//       padding-bottom: $i + px;
-//     }
-//   }
-// }
-
-
-// @for $i from 1 through 105 {
-//   .cs_pr_#{$i} {
-//     padding-right: $i + px;
-//   }
-// }
-
-// @for $i from 1 through 150 {
-//   .cs_pl_#{$i} {
-//     padding-left: $i + px;
-//   }
-// }
-
-// .cs_ml_24 {
-//   margin-left: 24px;
-// }
+.cs_fs_14 {
+  font-size: 14px;
+  line-height: 1.5em;
+}
 
 .cs_fs_16 {
   font-size: 16px;
@@ -187,6 +88,10 @@
 
 .cs_radius_50 {
   border-radius: 50px;
+}
+
+.cs_gap_y_24 {
+  gap: 24px 0;
 }
 
 .cs_gap_y_30 {
@@ -274,7 +179,7 @@
  Button Component Style
 ======================================================*/
 
-.cs_btn.cs_style_1 {
+.cs_btn_style_1 {
   border: 1px solid var(--white);
   border-radius: 50px;
   padding: 8px 32px;
@@ -338,7 +243,7 @@
   }
 }
 
-.cs_btn.cs_style_2 {
+.cs_btn_style_2 {
   position: relative;
   font-weight: 700;
   font-family: var(--primary-font);
@@ -366,8 +271,48 @@
     }
   }
 }
-
-.cs_section_heading.cs_style_1 {
+/*==================================================
+ Scroll To Button
+====================================================*/
+.cs_scrollup {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border-radius: 50%;
+  border: 0;
+  outline: 0;
+  color: #177245;
+  background-color: transparent;
+  transform: translateY(200px);
+  transition: transform 0.3s ease;
+  i {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    background-color: #50c878;
+  }
+  &.active {
+    transform: translateY(0);
+  }
+}
+@keyframes rotatePlane {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/*==================================================
+ Section Heading
+====================================================*/
+.cs_section_heading_style_1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -413,10 +358,9 @@
   max-width: 473px;
 }
 
-.cs_page_banner.cs_style_1 {
-  padding: 80px 0;
-  min-height: 355px;
-  margin-top: 90px;
+.cs_page_banner_style_1 {
+  padding: 130px 0;
+  margin-top: 100px;
 }
 
 .cs_pagination_box {
@@ -437,8 +381,11 @@
       color: var(--primary);
     }
   }
-}
 
+  @media (max-width: 575px) {
+    gap: 30px;
+  }
+}
 
 .cs_list.cs_style_1 {
   li {
@@ -448,17 +395,9 @@
   }
 }
 
-// .cs_icon.cs_style_1 {
-//   display: flex;
-//   align-items: center;
-//   gap: 12px;
-
-//   i {
-//     display: flex;
-//   }
-// }
-
-// accordian
+/*======================================================
+  Accordian
+========================================================*/
 .cs_accordian {
   background: var(--gray);
   cursor: pointer;
@@ -468,19 +407,6 @@
     gap: 20px 64px;
     flex-wrap: wrap;
     padding: 24px 40px;
-
-    @media(max-width:1399px) {
-      padding: 24px 15px;
-      gap: 20px 35px;
-    }
-
-    @media (max-width: 991px) {
-      padding: 24px 40px;
-    }
-
-    @media (max-width: 453px) {
-      padding-left: 40px;
-    }
 
     p {
       color: var(--primary);
@@ -494,26 +420,8 @@
     padding-bottom: 24px;
     margin-top: -12px;
 
-    @media (max-width:1399px) {
-      padding-left: 114px;
-      padding-right: 225px;
-    }
-
-    @media (max-width:1199px) {
-      padding-right: 40px;
-    }
-
-    @media (max-width: 991px) {
-      padding-left: 138px;
-    }
-
-    @media (max-width: 453px) {
-      padding-left: 40px;
-    }
-
     ul {
       list-style: disc;
-      transition: all 03s ease;
     }
   }
 
@@ -522,9 +430,8 @@
     top: 50%;
     right: 40px;
     transform: translateY(-50%) scale(0);
-    transition: 0.4s ease;
-    transition-delay: .3s;
-
+    transition: transform 0.4s ease;
+    transition-delay: 0.2s;
   }
 
   &:not(:last-child) {
@@ -535,16 +442,62 @@
     .cs_arrordian_img {
       transform: translateY(-50%) scale(1);
 
-      @media (max-width:1199px) {
-        position: relative;
-        transform: translateY(0%) scale(1);
-        padding-left: 50px;
-        padding-top: 20px;
+      @media (max-width: 1199px) {
+        transform: translateY(0) scale(1);
       }
+    }
+  }
+
+  @media (max-width: 1399px) {
+    .cs_accordian_head {
+      padding: 24px 15px;
+      gap: 20px 35px;
+    }
+
+    .cs_accordian_body {
+      padding-left: 114px;
+      padding-right: 225px;
+    }
+  }
+
+  @media (max-width: 1199px) {
+    .cs_accordian_body {
+      padding-right: 40px;
+    }
+
+    .cs_arrordian_img {
+      position: relative;
+      padding-top: 20px;
+      right: initial;
+      padding-left: 5px;
+    }
+  }
+
+  @media (max-width: 991px) {
+    .cs_accordian_head {
+      padding: 24px 40px;
+    }
+
+    .cs_accordian_body {
+      padding-left: 138px;
+    }
+  }
+
+  @media (max-width: 453px) {
+    .cs_accordian_head {
+      padding-left: 20px;
+      gap: 15px;
+    }
+
+    .cs_accordian_body {
+      padding: 0 20px 30px;
     }
   }
 }
 
+/*======================================================
+  Tabs
+========================================================*/
 .cs_tab_links {
   gap: 0 40px;
 
@@ -578,7 +531,9 @@ textarea {
 
 .cs_quantity_dropdown {
   position: absolute;
-  background-color: white;
+  left: 0;
+  top: 100%;
+  background-color: var(--white);
   width: 100%;
   border-radius: 10px;
   padding: 20px;
@@ -588,22 +543,27 @@ textarea {
 
 .cs_quantity_dropdown_item {
   display: flex;
+  gap: 15px;
   justify-content: space-between;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
-.cs_quantity_up {
-  position: absolute;
-  left: -25px;
-  font-size: 20px;
-}
-
+.cs_quantity_up,
 .cs_quantity_down {
-  font-size: 20px;
+  font-size: 14px;
+  color: var(--primary);
+  line-height: 1em;
+  cursor: pointer;
 }
 
 .cs_quantity_button {
-  height: 20px;
-  width: 20px;
+  height: 24px;
+  width: 24px;
+  padding: 3px;
   border: 1px solid var(--primary);
   border-radius: 50%;
   display: flex;
@@ -620,8 +580,105 @@ textarea {
   position: relative;
   display: flex;
   align-items: center;
+  gap: 10px;
   justify-content: space-between;
+
+  input {
+    text-align: center;
+    color: var(--primary);
+  }
 }
+
+.cs_calculate_area {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+/*===================================================
+  Tom Select
+=====================================================*/
+.full .ts-control {
+  background-color: transparent;
+}
+
+.ts-control,
+.ts-wrapper.single.input-active .ts-control {
+  background-color: transparent;
+  cursor: text;
+}
+
+.has-items .ts-control > input {
+  margin: 0 !important;
+}
+
+.ts-control {
+  font-size: 20px;
+  color: var(--border);
+  font-weight: 400;
+  font-family: var(--primary-font);
+  border: 0;
+  padding: 0 15px;
+  display: flex;
+  position: relative;
+
+  .item {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.25em !important;
+  }
+
+  input {
+    font-size: inherit;
+    font-weight: 400;
+    line-height: 1em !important;
+    width: 0;
+  }
+
+  ::after {
+    content: "\f078";
+    font-family: "Font Awesome 6 Free";
+    font-size: 16px;
+    font-weight: 900;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--secondary);
+  }
+}
+
+.ts-dropdown {
+  background-color: var(--white);
+  padding: 10px 0;
+
+  .option {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    color: rgba(20, 20, 20, 0.5);
+    padding: 10px 15px;
+
+    &:hover,
+    &.active {
+      color: var(--primary);
+      background-color: transparent;
+    }
+  }
+}
+
+/*===================================================
+  Contact Map
+=====================================================*/
 
 .cs_map {
   height: 470px;
@@ -631,19 +688,33 @@ textarea {
   iframe {
     height: 100%;
     width: 100%;
+    filter: brightness(100%) grayscale(0.85);
   }
 }
 
 /*=======================================================
- GSAP Smooth Scroll CSS Style
-=========================================================*/
-#smooth-wrapper {
+  Preloader
+ =========================================================*/
+.cs_preloader {
+  width: 100%;
   height: 100%;
-  overflow: hidden;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  background-color: var(--white);
+  .cs_wave_loader {
+    animation: fadeIn 1s ease;
+  }
 }
 
-#smooth-content {
-  .cs_slider_container {
-    transform: none !important;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
 }

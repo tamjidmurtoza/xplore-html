@@ -1,3 +1,6 @@
+/*========================================================
+  11. Iconbox
+==========================================================*/
 .cs_iconbox.cs_style_1 {
   display: flex;
   align-items: flex-start;
@@ -12,17 +15,17 @@
   position: relative;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     bottom: 0;
     background-color: var(--primary);
     border-radius: inherit;
-    color: rgba(255, 255, 255, .75);
+    color: rgba(255, 255, 255, 0.75);
     width: 100%;
     height: 0%;
     z-index: 0;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
   }
 
   .cs_icon {
@@ -33,7 +36,7 @@
     border: 1px solid var(--primary);
     color: var(--primary);
     z-index: 1;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
 
     .fa-rotate-by {
       transform: rotate(-45deg);
@@ -55,10 +58,10 @@
 
   .cs_iconbox_title,
   .cs_iconbox_details {
-    transition: all .4s ease;
+    transition: all 0.4s ease;
   }
 
-  >* {
+  > * {
     position: relative;
     z-index: 1;
   }

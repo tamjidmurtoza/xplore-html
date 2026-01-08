@@ -1,4 +1,7 @@
-.cs_testimonial.cs_style_1 {
+/*========================================================
+  12. Testimonial
+==========================================================*/
+.cs_testimonial_style_1 {
   border: 1px solid var(--primary);
   border-radius: 25px;
   padding: 32px;
@@ -14,7 +17,7 @@
     margin-bottom: 24px;
   }
 
-  .cs_avatar.cs_style_1 {
+  .cs_avatar_style_1 {
     margin-top: auto;
   }
 
@@ -23,7 +26,7 @@
   }
 }
 
-.cs_avatar.cs_style_1 {
+.cs_avatar_style_1 {
   display: flex;
   align-items: center;
   gap: 15px 20px;
@@ -51,9 +54,8 @@
   align-items: end;
 }
 
-
 .slick-active {
-  .cs_avatar.cs_style_1 {
+  .cs_avatar_style_1 {
     opacity: 1;
     transform: translateY(0);
   }

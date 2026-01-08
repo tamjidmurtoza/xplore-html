@@ -1,11 +1,16 @@
-.cs_about.cs_style_1 {
+/*========================================================
+  16. About
+==========================================================*/
+
+.cs_about_style_1 {
   .cs_about_section_img {
     img {
-    width: 100%;
-    min-height: 630px;
-    object-fit: cover;
+      width: 100%;
+      min-height: 630px;
+      object-fit: cover;
+    }
   }
-  }
+
   .cs_about_video_img {
     position: absolute;
     top: 0px;
@@ -13,19 +18,23 @@
     border-radius: 25px;
     box-shadow: 0 0 0 20px white;
   }
+
   .cs_about_right {
-    .cs_section_heading.cs_style_1{
-      .cs_section_title{
+    .cs_section_heading.cs_style_1 {
+      .cs_section_title {
         margin-bottom: 24px;
       }
-      p{
+
+      p {
         margin-bottom: 56px;
-         @media (max-width: 991px) {
+
+        @media (max-width: 991px) {
           margin-bottom: 24px;
         }
       }
     }
   }
+
   .cs_about_left_in {
     padding-right: 20px;
     padding-top: 60px;

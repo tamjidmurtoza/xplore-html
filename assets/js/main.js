@@ -1,9 +1,38 @@
 (function ($) {
   "use strict";
 
-  /*--------------------------------------------------------------
+  /*
+  |=============================================================
+  | Template Name: Sweety
+  | Author: Laralink
+  | Version: 1.0.0
+  |=============================================================
+  |=============================================================
+  | TABLE OF CONTENTS:
+  |=============================================================
+  |
+  | 01. Preloader
+  | 02. main nav
+  | 03. sticky header
+  | 04. dynamic background
+  | 05. Modal Video
+  | 06. Slick Slider
+  | 07. Accordian
+  | 08. heart toggle
+  | 09. tabs
+  | 10. Quantity
+  | 11. Light Gallery
+  | 12. Smooth Page Scroll
+  | 13. Date And Time Picker
+  | 14. hover tab
+  | 15. Scroll Up
+  | 16. AOS Animation
+  | 17. Dynamic contact form
+  |
+  */
+  /*====================================================
     Scripts initialization
-  --------------------------------------------------------------*/
+  ======================================================*/
   $.exists = function (selector) {
     return $(selector).length > 0;
   };
@@ -13,29 +42,67 @@
     mainNav();
     stickyHeader();
     modalVideo();
-    hoverTab();
     slickInit();
     accordian();
-    isotopInit();
     heartToggle();
     tabs();
     quantityInit();
     lightGallery();
-    datePicker();
     smoothScroll();
-    $.exists = function (selector) {
-      return $(selector).length > 0;
-    };
+    dateTimePicker();
+    hoverTab();
+    scrollUp();
+    aosInit();
+    contactFormInit();
+    $(".tom_select").each(function () {
+      new TomSelect(this, {
+        create: false,
+        persist: true,
+        onDropdownOpen: function (dropdown) {
+          dropdown.classList.add("active");
+        },
+        onDropdownClose: function (dropdown) {
+          dropdown.classList.remove("active");
+        },
+      });
+    });
+    if ($.exists(".cs_getting_year")) {
+      const date = new Date();
+      $(".cs_getting_year").text(date.getFullYear());
+    }
+  });
+
+  $(window).on("load", function () {
+    $("body").addClass("cs_preloader_active");
+    preloader();
   });
   $(window).on("scroll", function () {
     stickyHeader();
+    showScrollUp();
+    initScrollTopButton();
   });
   $(window).on("resize", function () {
-    isotopInit();
+    $(".cs_site_header").removeClass("active");
+    $(".cs_menu_toggle")
+      .removeClass("cs_toggle_active")
+      .siblings(".cs_nav_list_wrap")
+      .removeClass("cs_active");
   });
-  /*--------------------------------------------------------------
-    1. main nav
-  --------------------------------------------------------------*/
+  /*=====================================================
+    01. Preloader
+  =======================================================*/
+  function preloader() {
+    $(".cs_preloader_in").fadeOut();
+    $(".cs_preloader")
+      .delay(250)
+      .fadeOut("slow", function () {
+        // Remove scroll-block class after fadeOut
+        $("body").removeClass("cs_preloader_active");
+      });
+  }
+  /*====================================================
+    02. main nav
+  ======================================================*/
   function mainNav() {
     $(".cs_nav").append('<span class="cs_menu_toggle"><span></span></span>');
     $(".menu-item-has-children").append(
@@ -46,23 +113,16 @@
         .toggleClass("cs_toggle_active")
         .siblings(".cs_nav_list_wrap")
         .toggleClass("cs_active");
-      stickyHeader();
+      $(".cs_site_header").addClass("active");
     });
     $(".cs_menu_dropdown_toggle").on("click", function () {
       $(this).toggleClass("active").siblings("ul").slideToggle();
       $(this).parent().toggleClass("active");
     });
-    // Search Toggle
-    $(".cs_search_tobble_btn").on("click", function () {
-      $(".cs_header_form_wrap").toggleClass("active");
-    });
-    $(".cs_header_form_overlay").on("click", function () {
-      $(".cs_header_form_wrap").removeClass("active");
-    });
   }
-  /*--------------------------------------------------------------
-    2. sticky header
-  --------------------------------------------------------------*/
+  /*====================================================
+    03. sticky header
+  ======================================================*/
   function stickyHeader() {
     var scroll = $(window).scrollTop();
     var isMenuActive = $(".cs_nav_list_wrap").hasClass("cs_active");
@@ -72,9 +132,9 @@
       $(".cs_sticky_header").removeClass("cs_sticky_active");
     }
   }
-  /*--------------------------------------------------------------
-    3. dynamic background
-  --------------------------------------------------------------*/
+  /*====================================================
+    04. dynamic background
+  ======================================================*/
   function dynamicBackground() {
     $("[data-src]").each(function () {
       let src = $(this).attr("data-src");
@@ -84,9 +144,9 @@
       });
     });
   }
-  /*--------------------------------------------------------------
-    4. Modal Video
-  --------------------------------------------------------------*/
+  /*====================================================
+    05. Modal Video
+  ======================================================*/
   function modalVideo() {
     if ($.exists(".cs_video_open")) {
       $("body").append(`
@@ -124,17 +184,9 @@
       );
     }
   }
-  /*--------------------------------------------------------------
-    5. hover tab
-  --------------------------------------------------------------*/
-  function hoverTab() {
-    $(".cs_iconbox").hover(function () {
-      $(this).addClass("active").siblings().removeClass("active");
-    });
-  }
-  /*--------------------------------------------------------------
-    6. Slick Slider
-  --------------------------------------------------------------*/
+  /*====================================================
+    06. Slick Slider
+  ======================================================*/
   function slickInit() {
     if ($.exists(".cs_slider")) {
       $(".cs_slider").each(function () {
@@ -169,12 +221,13 @@
         if (slidesPerView == 1) {
           slidesPerView = 1;
         }
+        if (fadeVar) slidesPerView = 1;
         if (slidesPerView == "responsive") {
-          var slidesPerView = parseInt($ts.attr("data-add-slides"), 10);
-          var lgPoint = parseInt($ts.attr("data-lg-slides"), 10);
-          var mdPoint = parseInt($ts.attr("data-md-slides"), 10);
-          var smPoint = parseInt($ts.attr("data-sm-slides"), 10);
-          var xsPoing = parseInt($ts.attr("data-xs-slides"), 10);
+          var slidesPerView = parseInt($ts.attr("data-add-slides"), 10) || 1;
+          var lgPoint = parseInt($ts.attr("data-lg-slides"), 10) || 4;
+          var mdPoint = parseInt($ts.attr("data-md-slides"), 10) || 3;
+          var smPoint = parseInt($ts.attr("data-sm-slides"), 10) || 2;
+          var xsPoing = parseInt($ts.attr("data-xs-slides"), 10) || 1;
         }
         // Fade Slider
         var fadeVar = parseInt($($ts).attr("data-fade-slide"));
@@ -236,10 +289,9 @@
       });
     }
   }
-
-  /*--------------------------------------------------------------
-    7. Accordian
-  --------------------------------------------------------------*/
+  /*====================================================
+    07. Accordian
+  ======================================================*/
   function accordian() {
     $(".cs_accordian").children(".cs_accordian_body").hide();
     $(".cs_accordian.active").children(".cs_accordian_body").show();
@@ -261,17 +313,17 @@
       $(this).parent(".cs_accordian").siblings().removeClass("active");
     });
   }
-  /*--------------------------------------------------------------
-    8. heart toggle
-  --------------------------------------------------------------*/
+  /*====================================================
+    08. heart toggle
+  ======================================================*/
   function heartToggle() {
     $(".cs_icon").on("click", function () {
       $(this).toggleClass("active");
     });
   }
-  /*--------------------------------------------------------------
-    9. tabs
-  --------------------------------------------------------------*/
+  /*====================================================
+   09. tabs
+  ======================================================*/
   function tabs() {
     $(".cs_tabs .cs_tab_links a").on("click", function (e) {
       var currentAttrValue = $(this).attr("href");
@@ -283,75 +335,32 @@
       e.preventDefault();
     });
   }
-  /*--------------------------------------------------------------
-    10. Isotop
-  --------------------------------------------------------------*/
-  function isotopInit() {
-    if ($.exists(".cs_isotop")) {
-      $(".cs_isotop").isotope({
-        itemSelector: ".cs_isotop_item",
-        transitionDuration: "0.60s",
-        masonry: {
-          columnWidth: ".cs_grid_sizer",
-        },
-      });
-      /* Active Class of Portfolio*/
-      $(".cs_isotop_filter ul li").on("click", function (event) {
-        $(this).siblings(".active").removeClass("active");
-        $(this).addClass("active");
-        event.preventDefault();
-      });
-      /=== Portfolio filtering ===/;
-      $(".cs_isotop_filter ul").on("click", "a", function () {
-        var filterElement = $(this).attr("data-filter");
-        $(".cs_isotop").isotope({
-          filter: filterElement,
-        });
-      });
-    }
-  }
-
-  /*--------------------------------------------------------------
-    11. Date  Picker
-  --------------------------------------------------------------*/
-  function datePicker() {
-    $("#myDatePicker").datepicker({
-      dateFormat: "dd-mm-yy",
-      onSelect: function (dateText, inst) {
-        const date = $(this).datepicker("getDate");
-
-        const day = date.getDate();
-        const month = date.toLocaleString("default", { month: "long" });
-        const year = date.getFullYear();
-
-        const formattedDate = `${day}-${month}-${year}`;
-        $(this).val(formattedDate);
-      },
-    });
-  }
-  /*--------------------------------------------------------------
-    12. Quantity
-  --------------------------------------------------------------*/
+  /*====================================================
+   10. Quantity
+  ======================================================*/
   function quantityInit() {
     //Guest Summery Update Functionality
     function updateSummary() {
-      let adults = $(".cs_adult input").val();
-      let children = $(".cs_children input").val();
-      const guestSummery = [
-        adults > 0 ? `${adults} Adults` : "",
-        children > 0 ? `${children} Children` : "",
-      ]
-        .filter(Boolean)
-        .join(", ");
-      $(".cs_quantity_btn").val(guestSummery);
+      const adults = parseInt($(".cs_adult input").val(), 10) || 0;
+      const children = parseInt($(".cs_children input").val(), 10) || 0;
+
+      let summary = [];
+
+      if (adults > 0) {
+        summary.push(`${adults} Adult${adults > 1 ? "s" : ""}`);
+      }
+
+      if (children > 0) {
+        summary.push(`${children} Child${children > 1 ? "ren" : ""}`);
+      }
+      if (summary.length === 0) {
+        summary = ["Select Guests"];
+      }
+
+      $(".cs_quantity_btn").val(summary.join(", "));
     }
     $(".cs_quantity_btn").on("click", function () {
-      $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
-      updateSummary();
-    });
-    $(".cs_select_btn").on("click", function () {
-      $(this).siblings(".cs_quantity_dropdown").toggleClass("active");
-      updateRoom();
+      $(this).siblings(".cs_quantity_dropdown").slideToggle("active");
     });
     // Increment button
     $(".cs_quantity_up").click(function () {
@@ -379,46 +388,20 @@
       }
       updateSummary();
     });
-    // Room Summery Update Functionality
-    function updateRoom() {
-      $(".cs_options_wrapper input").on("click", function () {
-        var selectedValue = $(this).val();
-        $(this)
-          .closest(".cs_quantity_wrap")
-          .find(".cs_select_btn")
-          .val(selectedValue);
-        $(".cs_quantity_dropdown").removeClass("active");
-      });
-    }
-    // Language Update Functionality
-    $(".cs_language_switcher").on("click", function () {
-      $(this).siblings(".cs_language_dropdown").slideToggle();
-      updateLanguage();
-    });
-    function updateLanguage() {
-      $(".cs_language_dropdown input").on("click", function () {
-        var selectedValue = $(this).val();
-        $(this)
-          .closest(".cs_language_select")
-          .find(".cs_language_switcher input")
-          .val(selectedValue);
-        $(".cs_language_dropdown").slideUp();
-      });
-    }
+
     // Close Input Box
     function closeInputbox() {
       $(document).on("click", function (e) {
         if (!$(e.target).closest(".cs_quantity_wrap").length) {
-          $(".cs_quantity_dropdown").removeClass("active");
+          $(".cs_quantity_dropdown").slideToggle("active");
         }
       });
     }
     closeInputbox();
-    updateSummary();
   }
-  /*----------------------------------------------------------------
-         13. Light Gallery
- --------------------------------------------------------------*/
+  /*===================================================
+  11. Light Gallery
+ ======================================================*/
   function lightGallery() {
     $(".cs_lightgallery").each(function () {
       $(this).lightGallery({
@@ -429,21 +412,161 @@
       });
     });
   }
-  /*======================================================================
-    08. Smooth Page Scroll
-  ========================================================================*/
+  /*====================================================
+    12. Smooth Page Scroll
+  ======================================================*/
   function smoothScroll() {
-    const lenis = new Lenis({
-      duration: 1.5,
-      smooth: true,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-    });
+    if (typeof Lenis !== "undefined") {
+      const lenis = new Lenis({
+        duration: 1.2,
+        smooth: true,
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      });
 
-    function raf(time) {
-      lenis.raf(time);
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+
       requestAnimationFrame(raf);
     }
+  }
+  /*====================================================
+    13. Date And Time Picker
+  ======================================================*/
+  function dateTimePicker() {
+    flatpickr("#timePicker", {
+      enableTime: true,
+      allowInput: true,
+      noCalendar: true,
+      dateFormat: "G:i: K",
+    });
+    flatpickr("#datePicker", {
+      enableTime: false,
+      allowInput: true,
+      dateFormat: "d F Y",
+    });
+  }
+  /*====================================================
+    14. hover tab
+  ======================================================*/
+  function hoverTab() {
+    $(".cs_iconbox").hover(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+  }
+  /*=============================================================
+    15. Scroll Up
+  ===============================================================*/
+  function scrollUp() {
+    $(".cs_scrollup").on("click", function (e) {
+      e.preventDefault();
+      $("html,body").animate(
+        {
+          scrollTop: 0,
+          behavior: "smooth",
+        },
+        0
+      );
+    });
+  }
+  /* For Scroll Up */
+  function showScrollUp() {
+    let scroll = $(window).scrollTop();
+    if (scroll >= 350) {
+      $(".cs_scrollup").addClass("active");
+    } else {
+      $(".cs_scrollup").removeClass("active");
+    }
+  }
+  // Scroll Button Styling
+  function initScrollTopButton() {
+    var scrollBtn = $(".cs_scrollup");
+    var progressCircle = scrollBtn.find(".progress-circle");
+    var radius = progressCircle[0].r.baseVal.value;
+    var circumference = 2 * Math.PI * radius;
 
-    requestAnimationFrame(raf);
+    // Initial stroke setup
+    progressCircle.css({
+      strokeDasharray: circumference,
+      strokeDashoffset: circumference,
+    });
+
+    function setProgress(percent) {
+      var offset = circumference - (percent / 100) * circumference;
+      progressCircle.css("stroke-dashoffset", offset);
+    }
+
+    // Scroll event
+    $(window).on("scroll", function () {
+      var scrollTop = $(window).scrollTop();
+      var docHeight = $(document).height() - $(window).height();
+
+      var percent = (scrollTop / docHeight) * 100;
+      percent = Math.min(Math.max(percent, 0), 100);
+
+      setProgress(percent);
+      setProgress();
+    });
+  }
+  /*=============================================================
+    16. AOS Animation
+  ===============================================================*/
+  function aosInit() {
+    AOS.init({
+      offset: 100,
+      duration: 800,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  }
+  /*====================================================
+    17. Dynamic contact form
+  ======================================================*/
+  function contactFormInit() {
+    if ($.exists("#cs_form")) {
+      const form = document.getElementById("cs_form");
+      const result = document.getElementById("cs_result");
+
+      form.addEventListener("submit", function (e) {
+        const formData = new FormData(form);
+        e.preventDefault();
+        var object = {};
+        formData.forEach((value, key) => {
+          object[key] = value;
+        });
+        var json = JSON.stringify(object);
+        result.innerHTML = "Please wait...";
+
+        fetch("https://api.web3forms.com/submit", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+          body: json,
+        })
+          .then(async (response) => {
+            let json = await response.json();
+            if (response.status == 200) {
+              result.innerHTML = json.message;
+            } else {
+              console.log(response);
+              result.innerHTML = json.message;
+            }
+          })
+          .catch((error) => {
+            console.log(error);
+            result.innerHTML = "Something went wrong!";
+          })
+          .then(function () {
+            form.reset();
+            setTimeout(() => {
+              result.style.display = "none";
+            }, 5000);
+          });
+      });
+    }
   }
 })(jQuery); // end of use strict

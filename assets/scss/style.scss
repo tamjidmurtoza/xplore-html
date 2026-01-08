@@ -1,12 +1,34 @@
-@import "default/typography";
+/*--------------------------------------------------------------
+>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+01. Variable
+02. Typography
+03. General
+04. Spacing
+05. Header
+06. Footer
+07. Video Modal
+08. Slider
+09. Cards
+10. Hero
+11. Iconbox
+12. Testimonial
+13. Contact
+14. Video Block
+15. Team
+16. About
+17. Trip Details
+18. Gallery
+--------------------------------------------------------------*/
+
 @import "default/variable";
+@import "default/typography";
 @import "common/general";
 @import "common/spacing";
 @import "common/header";
 @import "common/footer";
 @import "common/video-modal";
 @import "common/slider";
-@import "common/isotope";
 @import "common/card";
 @import "shortcode/hero";
 @import "shortcode/iconbox";

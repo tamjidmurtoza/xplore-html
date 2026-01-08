@@ -1,488 +1,562 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Favicon -->
+    <link rel="icon" href="assets/img/favicon.png">
+    <link rel="stylesheet" href="assets/css/aos.min.css">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome.min.css">
     <link rel="stylesheet" href="assets/css/slick.min.css">
-    <link rel="stylesheet" href="assets/css/jquery-date-picker.min.css">
+    <link rel="stylesheet" href="assets/css/flatpickr.min.css">
+    <link rel="stylesheet" href="assets/css/tom-select.min.css">
     <link rel="stylesheet" href="assets/css/lightgallery.min.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>xPlore - Travel Tour Agency </title>
-</head>
-<body>
-    <header class="cs_site_header cs_style_1 cs_white_bg cs_sticky_header">
-        <div class="cs_main_header">
-            <div class="container">
-                <div class="cs_main_header_in">
-                    <div class="cs_main_header_left">
-                        <a class="cs_site_branding" href="index.html">
-                            <img src="assets/img/logo_2.svg" alt="Logo">
-                        </a>
-                    </div>
-                    <div class="cs_main_header_right">
-                        <div class="cs_nav cs_heading_color">
-                            <nav class="cs_nav_list_wrap ">
-                                <ul class="cs_nav_list">
-									<li><a href="about.html">About</a></li>
-									<li class="menu-item-has-children">
-										<a href="">Trips</a>
-										<ul>
-											<li><a href="trips.html">Trips</a></li>
-											<li><a href="trip-details.html">Trips Details</a></li>
-										</ul>
-									</li>
-									<li><a href="gallery.html">Gallery</a></li>
-									<li><a href="contact.html">Contact</a></li>
-								</ul>
-                            </nav>
-                        </div>
-                    </div>
-
-                </div>
+    <title>Sweety - xPlore - Travel Tour Agency Website HTML Template</title>
+  </head>
+  <body>
+    <!-- Preloader Start -->
+    <div class="cs_preloader cs_center">
+      <div class="cs_preloader_in">
+        <svg class="cs_wave_loader" width="200" height="120" viewBox="0 0 200 120"
+          xmlns="http://www.w3.org/2000/svg">
+          <!-- Waves -->
+          <path d="M0 70 Q 25 60, 50 70 T 100 70 T 150 70 T 200 70" fill="none" stroke="#1e88e5" stroke-width="4" stroke-linecap="round" stroke-dasharray="120 80">
+            <animate attributeName="stroke-dashoffset" from="0" to="200" dur="1.5s" repeatCount="indefinite"/>
+          </path>
+          <path d="M0 85 Q 25 75, 50 85 T 100 85 T 150 85 T 200 85" fill="none" stroke="#64b5f6" stroke-width="3"
+            stroke-linecap="round" stroke-dasharray="100 100">
+          <animate attributeName="stroke-dashoffset" from="200" to="0" dur="2s" repeatCount="indefinite"/>
+          </path>
+          <!-- Sun / Boat Dot -->
+          <circle cx="100" cy="45" r="8" fill="#ffb300">
+            <animate attributeName="cy" values="40;20;40" keyTimes="0;0.5;1" dur="2s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1;0.42 0 0.58 1"/>
+          </circle>
+        </svg>
+      </div>
+    </div>
+    <!-- Preloader End -->
+    <!-- Start Header -->
+    <header class="cs_site_header cs_style_1 cs_sticky_header cs_fs_16 cs_primary_color cs_white_bg">
+      <div class="cs_main_header">
+        <div class="container">
+          <div class="cs_main_header_in">
+            <div class="cs_main_header_left">
+              <a class="cs_site_branding" href="index.html" aria-label="Logo with home page link">
+              <img src="assets/img/logo_2.svg" alt="Logo">
+              </a>
             </div>
+            <div class="cs_main_header_right">
+              <div class="cs_nav">
+                <nav class="cs_nav_list_wrap ">
+                  <ul class="cs_nav_list cs_mp_0">
+                    <li><a href="about.html">About</a></li>
+                    <li class="menu-item-has-children">
+                      <a href="">Trips</a>
+                      <ul>
+                        <li><a href="trips.html">Trips</a></li>
+                        <li><a href="trip-details.html">Trips Details</a></li>
+                      </ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </header>
-    <div id="smooth-wrapper">
-	<div id="smooth-content">
-    <!-- start hero section -->
-    <section class="cs_page_banner cs_style_1 cs_bg_filed text-center" data-src="assets/img/trips_banner.jpg">
-        <div class="container">
-            <h1 class="cs_banner_title cs_fs_80 cs_white_color mb-0">Tour <i>packages</i></h1>
-        </div>
+    <!-- End Header -->
+    <!-- Start hero section -->
+    <section class="cs_page_banner_style_1 cs_bg_filed text-center" data-src="assets/img/trips_banner.jpg">
+      <div class="container">
+        <h1 class="cs_banner_title cs_fs_80 cs_white_color mb-0" data-aos="fade-down">Tour <i>packages</i></h1>
+      </div>
     </section>
-    <!-- end hero section -->
-    <!-- start card section -->
+    <!-- End hero section -->
+    <!-- Start card section -->
     <section>
-        <div class="cs_height_100 cs_height_lg_70"></div>
-        <div class="container">
-                <div class="row cs_gap_y_40">
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                <img src="assets/img/Item 1.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-                                    <h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Tropical Paradise</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                            <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                <span>Indonesia Bali</span>
-                                            </p>
-                                            <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                <span>7 days, 6 nights</span>
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$1299</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                <img src="assets/img/Item 2.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-							        <h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Cruise Getaway</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Caribbean Islands
-                                            </p>
-                                             <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                7 days, 6 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$1799</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                 <img src="assets/img/Item 3.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-							        	<h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Cultural Immersion</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Cusco, Peru
-                                            </p>
-                                             <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                8 days, 7 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$1199</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                 <img src="assets/img/Item 4.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-                                    <h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">River Expedition Paradise</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Thuringia, Germany
-                                            </p>
-                                            <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                8 days, 7 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$899</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                    <img src="assets/img/Item 5.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-							        	<h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Mountain Odyssey</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Kathmandu, Nepal
-                                            </p>
-                                             <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                12 days, 11 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$1799</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                    <img src="assets/img/Item 6.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-							        	<h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Wildlife Safari</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Nairobi, Kenya
-                                            </p>
-                                             <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                10 days, 9 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$1199</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                    <img src="assets/img/Item 7.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-                                    <h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">History Voyage</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                     <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                         Puno, Peru
-                                    </p>
-                                    <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                        5 days, 4 nights
-                                    </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$599</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                    <img src="assets/img/Item 8.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-							        	<h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">City Adventure</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Rome, Italy
-                                            </p>
-                                             <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                5 days, 4 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$799</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="cs_card cs_style_1 cs_type_1 cs_radius_25">
-                            <a href="trip-details.html" class="cs_card_img">
-                                    <img src="assets/img/Item 9.jpg" alt="sweet place">
-                            </a>
-                                <button class="cs_icon cs_center">
-                                    <i class="fa-solid fa-heart"></i>
-                                </button>
-                                <div class="cs_card_info cs_white_color">
-							        <h3 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Wildlife Safari</h3>
-							        <div class="cs_card_details">
-								        <div>
-                                             <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><mask id="mask0_4072_182" style="mask-type:luminance"maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16"><path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" /></mask><g mask="url(#mask0_4072_182)"><path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round"/> <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z"stroke="white" stroke-miterlimit="10" stroke-linecap="round"stroke-linejoin="round" /></g></svg>
-                                                 Nairobi, Kenya
-                                            </p>
-                                             <p class="cs_card_subtitle cs_fs_16 mb-0">
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"viewBox="0 0 16 16" fill="none"><g clip-path="url(#clip0_4072_195)"><path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z"fill="white" /><path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z"fill="white" /></g><defs><clipPath id="clip0_4072_195"><rect width="16" height="16" fill="white" /></clipPath></defs></svg>
-                                                10 days, 9 nights
-                                            </p>
-                                        </div>
-                                        <p class="cs_card_right mb-0">$1199</p>
-							        </div>
-					    	</div>
-                        </div>
-                    </div>
-                   
+      <div class="cs_height_100 cs_height_lg_70"></div>
+      <div class="container">
+        <div class="cs_grid_style_1">
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_1.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Tropical Paradise</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Indonesia Bali</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>7 days, 6 nights</span>
+                  </p>
                 </div>
-                <div class="cs_height_100 cs_height_lg_70"></div>
-                <ul class="cs_pagination_box cs_mp_0">
-                    <li><a href="#" class="cs_pagination_arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="16" viewBox="0 0 47 16" fill="none"><path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM47 9H1V7H47V9Z" fill="currentColor"/></svg></a>
-                    </li>
-                    <li><a class="active" href="#">01</a></li>
-                    <li><a href="#">02</a></li>
-                    <li><a href="#">03</a></li>
-                    <li><a href="#" class="cs_pagination_arrow">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="47" height="16" viewBox="0 0 47 16" fill="none"><path d="M46.7071 8.70711C47.0976 8.31658 47.0976 7.68342 46.7071 7.29289L40.3431 0.928932C39.9526 0.538408 39.3195 0.538408 38.9289 0.928932C38.5384 1.31946 38.5384 1.95262 38.9289 2.34315L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.70711ZM0 9H46V7H0V9Z" fill="currentColor"/></svg></a>
-                    </li>
-                </ul>
-                <div class="cs_height_100 cs_height_lg_70"></div>
+                <p class="cs_card_right mb-0">$1299</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_2.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Cruise Getaway</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Caribbean Islands</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>7 days, 6 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$1799</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_3.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Cultural Immersion</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Cusco, Peru</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>8 days, 7 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$1199</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_4.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">River Expedition</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Thuringia, Germany</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>8 days, 7 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$899</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_5.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Mountain Odyssey</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Kathmandu, Nepal</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>12 days, 11 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$1799</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_6.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Wildlife Safari</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Nairobi, Kenya</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>10 days, 9 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$1199</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_7.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">History Voyage</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Puno, Peru</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>5 days, 4 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$599</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_8.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">City Adventure</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Rome, Italy</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>5 days, 4 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$799</p>
+              </div>
+            </div>
+          </div>
+          <div class="cs_card_style_2 cs_radius_25 position-relative" data-aos="fade-up">
+            <a href="trip-details.html" class="cs_card_img">
+            <img src="assets/img/Item_9.jpg" alt="sweet place">
+            </a>
+            <button class="cs_icon cs_center"><i class="fa-solid fa-heart"></i></button>
+            <div class="cs_card_info cs_white_color">
+              <h2 class="cs_card_title cs_fs_36 cs_white_color cs_bold cs_mb_16">Forest Expedition</h2>
+              <div class="cs_card_details">
+                <div>
+                  <p class="cs_card_subtitle cs_fs_16 cs_mb_8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <path d="M0 9.53674e-07H16V16H0V9.53674e-07Z" fill="white" />
+                      </mask>
+                      <path d="M8 15.5312C6.125 12.7188 2.84375 8.90625 2.84375 5.625C2.84375 2.78184 5.15684 0.468751 8 0.468751C10.8432 0.468751 13.1562 2.78184 13.1562 5.625C13.1562 8.90625 9.875 12.7188 8 15.5312Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M8 7.96875C6.70772 7.96875 5.65625 6.91728 5.65625 5.625C5.65625 4.33272 6.70772 3.28125 8 3.28125C9.29228 3.28125 10.3438 4.33272 10.3438 5.625C10.3438 6.91728 9.29228 7.96875 8 7.96875Z" stroke="white" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <span>Nairobi, Kenya</span>
+                  </p>
+                  <p class="cs_card_subtitle cs_fs_16 mb-0">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <path d="M10.8506 9.41285L8.61975 7.73973V4.33154C8.61975 3.98885 8.34275 3.71185 8.00006 3.71185C7.65737 3.71185 7.38037 3.98885 7.38037 4.33154V8.0496C7.38037 8.24479 7.47209 8.42885 7.62825 8.54535L10.1069 10.4044C10.2185 10.488 10.3486 10.5283 10.4781 10.5283C10.6671 10.5283 10.853 10.4434 10.9745 10.2798C11.1803 10.0065 11.1245 9.61798 10.8506 9.41285Z" fill="white" />
+                      <path d="M8 0C3.58853 0 0 3.58853 0 8C0 12.4115 3.58853 16 8 16C12.4115 16 16 12.4115 16 8C16 3.58853 12.4115 0 8 0ZM8 14.7607C4.27266 14.7607 1.23934 11.7273 1.23934 8C1.23934 4.27266 4.27266 1.23934 8 1.23934C11.728 1.23934 14.7607 4.27266 14.7607 8C14.7607 11.7273 11.7273 14.7607 8 14.7607Z" fill="white" />
+                    </svg>
+                    <span>10 days, 9 nights</span>
+                  </p>
+                </div>
+                <p class="cs_card_right mb-0">$1199</p>
+              </div>
+            </div>
+          </div>
         </div>
+        <div class="cs_height_100 cs_height_lg_70"></div>
+        <ul class="cs_pagination_box cs_mp_0">
+          <li>
+            <a href="#" class="cs_pagination_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="47" height="16" viewBox="0 0 47 16" fill="none">
+                <path d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM47 9H1V7H47V9Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+          <li><a class="active" href="#">01</a></li>
+          <li><a href="#">02</a></li>
+          <li><a href="#">03</a></li>
+          <li>
+            <a href="#" class="cs_pagination_arrow">
+              <svg xmlns="http://www.w3.org/2000/svg" width="47" height="16" viewBox="0 0 47 16" fill="none">
+                <path d="M46.7071 8.70711C47.0976 8.31658 47.0976 7.68342 46.7071 7.29289L40.3431 0.928932C39.9526 0.538408 39.3195 0.538408 38.9289 0.928932C38.5384 1.31946 38.5384 1.95262 38.9289 2.34315L44.5858 8L38.9289 13.6569C38.5384 14.0474 38.5384 14.6805 38.9289 15.0711C39.3195 15.4616 39.9526 15.4616 40.3431 15.0711L46.7071 8.70711ZM0 9H46V7H0V9Z" fill="currentColor"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="cs_height_100 cs_height_lg_70"></div>
+      </div>
     </section>
-    <!-- end must experience section -->
-    <!-- start form section -->
+    <!-- End must experience section -->
+    <!-- Start form section -->
     <section class="cs_contact_section cs_style_1" data-src="assets/img/email-newsletter_3.jpg">
-		<div class="container">
-			<div class="cs_section_heading cs_style_1 flex-column gap-0 align-items-center">
-						<h2 class="cs_fs_80 cs_mb_24">Ready to <i>embark</i> <br> on a <i>new</i> journey?</h2>
-						<p class="text-center mb-0">Don't let your dream getaway remain a dream any longer. Take
-							action now and let us craft your next <br> unforgettable adventure. Join us in turning your
-							travel fantasies into unforgettable realities.
-                        </p>
-			</div>
-			<div class="cs_height_64 cs_height_lg_40"></div>
-			<div class="cs_contact_form_wrapper">					
-				<form action="https://api.web3forms.com/submit" method="post" class="row cs_gap_y_50" id="cs_form">
-						<div class="col-sm-6">
-							<input type="text" name="name" class="cs_form_field" placeholder="Name" autocomplete="given-name" required>
-						</div>
-						<div class="col-sm-6">
-							<input type="number" name="phone" class="cs_form_field" placeholder="Phone Number">
-						</div>
-						<div class="col-sm-12">
-							<input type="email" name="email" class="cs_form_field" placeholder="Email Address" autocomplete="given-email" required>
-						</div>
-						<div class="col-md-12">
-							<div class="cs_form_checkbox_wraper d-flex justify-content-between align-items-center">
-								<div class="cs_custom_checkbox">
-								<input type="checkbox" name="checkbox" id="checkbox" required>
-								<label>By subscribing to newsletter, I agree with <a href="#" class="cs_bold">Terms & Condition</a></label>
-							</div>
-							<button class="cs_btn cs_style_1 cs_type_1 cs_bold" type="submit">
-								<span>Subscribe Now</span>
-								<svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8"fill="currentColor">
-									<path d="M24.8536 4.35355C25.0488 4.15829 25.0488 3.84171 24.8536 3.64645L21.6716 0.464466C21.4763 0.269204 21.1597 0.269204 20.9645 0.464466C20.7692 0.659728 20.7692 0.976311 20.9645 1.17157L23.7929 4L20.9645 6.82843C20.7692 7.02369 20.7692 7.34027 20.9645 7.53553C21.1597 7.7308 21.4763 7.7308 21.6716 7.53553L24.8536 4.35355ZM0.5 4.5H24.5V3.5H0.5V4.5Z"fill="currentColor" />
-								</svg>
-							</button>
-							</div>
-						</div>
-				</form>
-			</div>
-		</div>
-		<div class="cs_brand_section">
-			<div class="container">
-				<h2 class="cs_fs_20 cs_white_color cs_mb_40 text-center">We are trusted by our partners and brands</h2>
-				<div class="cs_slider cs_style_1 cs_slider_gap_66">
-					<div class="cs_slider_container" data-autoplay="1" data-loop="1" data-speed="800" data-center="0"
-						data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="2" data-sm-slides="3"
-						data-md-slides="4" data-lg-slides="6" data-add-slides="6">
-						<div class="cs_slider_wrapper">
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_1.svg" alt="brand logo">
-                                </div>
-							</div>
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_2.svg" alt="brand logo">
-                                </div>
-							</div>
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_3.svg" alt="brand logo">
-                                </div>
-							</div>
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_4.svg" alt="brand logo">
-                                </div>
-							</div>
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_5.svg" alt="brand logo">
-                                </div>
-							</div>
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_6.svg" alt="brand logo">
-                                </div>
-							</div>
-							<div class="cs_slide">
-								<div class="cs_brand">
-                                    <img src="assets/img/brand_logo_1.svg" alt="brand logo">
-                                </div>
-							</div>
-						
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-    <!-- end form section -->
-    <!-- start footer section -->
-    <footer class="cs_footer cs_style_1">
-		<div class="container">
-			<div class="cs_footer_row">
-				<div class="cs_footer_col">
-					<div class="cs_footer_widget">
-							<h3 class="cs_footer_widget_title">Discover</h3>
-							<ul class="cs_footer_widget_menu cs_mp_0">
-								<li><a href="index.html">Home</a></li>
-								<li><a href="about.html">About Us</a></li>
-								<li><a href="trips.html">Trip Packages</a></li>
-								<li><a href="trip-details.html">Travel blog</a></li>
-							</ul>
-					</div>
-				</div>
-				<div class="cs_footer_col">
-					<div class="cs_footer_widget">
-					<h3 class="cs_footer_widget_title">Services</h3>
-							<ul class="cs_footer_widget_menu cs_mp_0">
-								<li><a href="#">Trip Itinerary</a></li>
-								<li><a href="#">Trip Preparations</a></li>
-								<li><a href="#">Booking Form</a></li>
-							</ul>
-					</div>
-				</div>
-				<div class="cs_footer_col">
-					<div class="cs_footer_widget">
-							<h3 class="cs_footer_widget_title">Packages</h3>
-							<ul class="cs_footer_widget_menu cs_mp_0">
-								<li><a href="#">Popular Trip</a></li>
-								<li><a href="#">Personal Tour</a></li>
-								<li><a href="#">Group Tour</a></li>
-								<li><a href="#">Business Tour</a></li>
-								<li><a href="#">Testimonials</a></li>
-							</ul>
-					</div>
-				</div>
-				<div class="cs_footer_col">
-					<div class="cs_footer_widget">
-							<h3 class="cs_footer_widget_title">Support</h3>
-							<ul class="cs_footer_widget_menu cs_mp_0">
-								<li><a href="#">FAQ</a></li>
-								<li><a href="#">Customer Services</a></li>
-								<li><a href="#">Terms & Condition</a></li>
-								<li><a href="#">Privacy Policy</a></li>
-								<li><a href="#">Refund Policy</a></li>
-								<li><a href="#">Travel Policy</a></li>
-							</ul>
-					</div>
-				</div>
-				<div class="cs_footer_col">
-					<div class="cs_footer_widget cs_contacts">
-							<h3 class="cs_footer_widget_title">Contacts</h3>
-							<ul class="cs_footer_widget_menu cs_white_color cs_mp_0">
-								<li>
-									<a href="tel:+1234567890">
-									<i class="fa-solid fa-phone"></i>+123 456 7890</a>
-								</li>
-								<li class="d-flex">
-									<i class="fa-solid fa-location-dot"></i>
-									<span>123 Wanderer Street, City Name, State Name,
-										Nation</span>
-								</li>
-							</ul>
-							<div class="cs_copyright cs_fs_16">Copyright &copy; 2025</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</footer>
-    <!-- end footer section -->
-    </div>
-    </div>
-    <script src="assets/js/jquery-3.7.1.min.js"></script>
-    <script src="assets/js/jquery.slick.min.js"></script>
-    <script src="assets/js/lightgallery.min.js"></script>
-    <script src="assets/js/jquery-date-picker.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/gsap.min.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/ScrollSmoother.min.js"></script>
-    <script src="assets/js/main.js"></script>
-</body>
-
+      <div class="container">
+        <div class="cs_section_heading_style_1 flex-column gap-0 align-items-center">
+          <h2 class="cs_fs_80 cs_mb_24" data-aos="fade-down">Ready to <i>embark</i> <br> on a <i>new</i> journey?</h2>
+          <p class="text-center mb-0">Don't let your dream getaway remain a dream any longer. Take action now and let us craft your next <br> unforgettable adventure. Join us in turning your travel fantasies into unforgettable realities.</p>
+        </div>
+        <div class="cs_height_64 cs_height_lg_40"></div>
+        <div class="cs_contact_form_wrapper">
+          <form action="https://api.web3forms.com/submit" method="post" class="row cs_gap_y_50" id="cs_form">
+            <div class="col-sm-6">
+              <input type="text" name="name" class="cs_form_field" placeholder="Name" autocomplete="name" required>
+            </div>
+            <div class="col-sm-6">
+              <input type="number" name="phone" class="cs_form_field" placeholder="Phone Number" autocomplete="off">
+            </div>
+            <div class="col-sm-12">
+              <input type="email" name="email" class="cs_form_field" placeholder="Email Address" autocomplete="email" required>
+            </div>
+            <div class="col-md-12">
+              <div class="cs_form_checkbox_wraper d-flex justify-content-between align-items-center">
+                <div class="cs_custom_checkbox">
+                  <input type="checkbox" name="checkbox" id="checkbox" required>
+                  <label for="checkbox">By subscribing to newsletter, I agree with <a href="#" class="cs_bold">Terms & Condition</a></label>
+                </div>
+                <button class="cs_btn_style_1 cs_type_1 cs_bold" type="submit">
+                  <span>Subscribe Now</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="8" viewBox="0 0 25 8" fill="currentColor">
+                    <path d="M24.8536 4.35355C25.0488 4.15829 25.0488 3.84171 24.8536 3.64645L21.6716 0.464466C21.4763 0.269204 21.1597 0.269204 20.9645 0.464466C20.7692 0.659728 20.7692 0.976311 20.9645 1.17157L23.7929 4L20.9645 6.82843C20.7692 7.02369 20.7692 7.34027 20.9645 7.53553C21.1597 7.7308 21.4763 7.7308 21.6716 7.53553L24.8536 4.35355ZM0.5 4.5H24.5V3.5H0.5V4.5Z" fill="currentColor" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="cs_brand_section">
+        <div class="container">
+          <h2 class="cs_fs_20 cs_white_color cs_mb_40 text-center">We are trusted by our partners and brands</h2>
+          <div class="cs_slider cs_style_1 cs_slider_gap_66">
+            <div class="cs_slider_container" data-autoplay="1" data-loop="1" data-speed="800" data-center="0"
+              data-variable-width="0" data-slides-per-view="responsive" data-xs-slides="2" data-sm-slides="3"
+              data-md-slides="4" data-lg-slides="6" data-add-slides="6">
+              <div class="cs_slider_wrapper">
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_1.svg" alt="brand logo">
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_2.svg" alt="brand logo">
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_3.svg" alt="brand logo">
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_4.svg" alt="brand logo">
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_5.svg" alt="brand logo">
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_6.svg" alt="brand logo">
+                  </div>
+                </div>
+                <div class="cs_slide">
+                  <div class="cs_brand cs_center">
+                    <img src="assets/img/brand_logo_1.svg" alt="brand logo">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End form section -->
+    <!-- Start footer section -->
+    <footer class="cs_footer_style_1 cs_primary_bg">
+      <div class="container">
+        <div class="cs_footer_row">
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h3 class="cs_footer_widget_title cs_fs_16 cs_white_color cs_bold cs_mb_12">Discover</h3>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="index.html" aria-label="Page link">Home</a></li>
+                <li><a href="about.html" aria-label="Page link">About Us</a></li>
+                <li><a href="trips.html" aria-label="Page link">Trip Packages</a></li>
+                <li><a href="trip-details.html" aria-label="Page link">Travel blog</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h3 class="cs_footer_widget_title cs_fs_16 cs_white_color cs_bold cs_mb_12">Services</h3>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="trip-details.html" aria-label="Service link">Trip Itinerary</a></li>
+                <li><a href="trip-details.html" aria-label="Service link">Trip Preparations</a></li>
+                <li><a href="trip-details.html" aria-label="Service link">Booking Form</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h3 class="cs_footer_widget_title cs_fs_16 cs_white_color cs_bold cs_mb_12">Packages</h3>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="trip-details.html" aria-label="Package link">Popular Trip</a></li>
+                <li><a href="trip-details.html" aria-label="Package link">Personal Tour</a></li>
+                <li><a href="trip-details.html" aria-label="Package link">Group Tour</a></li>
+                <li><a href="trip-details.html" aria-label="Package link">Business Tour</a></li>
+                <li><a href="trip-details.html" aria-label="Package link">Testimonials</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h3 class="cs_footer_widget_title cs_fs_16 cs_white_color cs_bold cs_mb_12">Support</h3>
+              <ul class="cs_footer_widget_menu cs_mp_0">
+                <li><a href="#" aria-label="Support link">FAQ</a></li>
+                <li><a href="#" aria-label="Support link">Customer Services</a></li>
+                <li><a href="#" aria-label="Support link">Terms & Condition</a></li>
+                <li><a href="#" aria-label="Support link">Privacy Policy</a></li>
+                <li><a href="#" aria-label="Support link">Refund Policy</a></li>
+                <li><a href="#" aria-label="Support link">Travel Policy</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cs_footer_col">
+            <div class="cs_footer_widget">
+              <h3 class="cs_footer_widget_title cs_fs_16 cs_white_color cs_bold cs_mb_40 cs_mb_lg_12">Contacts</h3>
+              <ul class="cs_footer_widget_menu cs_contacts cs_white_color cs_mp_0">
+                <li>
+                  <a href="tel:+1234567890" aria-label="Phone call link"><i class="fa-solid fa-phone"></i>+123 456 7890</a>
+                </li>
+                <li>
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>123 Wanderer Street, City Name, State Name, Nation</span>
+                </li>
+              </ul>
+              <div class="cs_copyright cs_fs_16">Copyright &copy; <span class="cs_getting_year"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- End footer section -->
+    <!-- Start Scroll Up Buttton -->
+    <button type="button" class="cs_scrollup cs_center">
+     <i class="fa-solid fa-arrow-up"></i>
+     <svg width="40" height="40" viewBox="0 0 40 40">
+      <circle cx="20" cy="20" r="19" stroke="#50C878" stroke-width="2" fill="none"/>
+      <circle cx="20" cy="20" r="19" stroke="currentColor" stroke-width="2" fill="none" stroke-dasharray="119.38" stroke-dashoffset="119.38" transform="rotate(-90 20 20)" class="progress-circle"/>
+    </svg>
+    </button>
+    <!-- End Scroll Up Buttton -->
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/jquery.slick.min.js"></script>
+    <script src="./assets/js/tom-select.min.js"></script>
+    <script src="./assets/js/aos.min.js"></script>
+    <script src="./assets/js/flatpickr.min.js"></script>
+    <script src="./assets/js/lightgallery.min.js"></script>
+    <script src="assets/js/lenis.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>

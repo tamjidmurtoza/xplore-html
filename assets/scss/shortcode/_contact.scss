@@ -1,3 +1,7 @@
+/*========================================================
+  13. Contact
+==========================================================*/
+
 form {
 
   input::-webkit-outer-spin-button,
@@ -7,7 +11,8 @@ form {
   }
 }
 
-.cs_contact_section.cs_style_1 {
+.cs_contact_section.cs_style_1,
+.cs_contact_1 {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
@@ -21,7 +26,9 @@ form {
     margin: 0 auto;
     padding: 56px 50px;
     border-radius: 25px;
-    background: linear-gradient(92deg, rgba(255, 255, 255, 0.60) 16.51%, rgba(255, 255, 255, 0.20) 94.64%);
+    background: linear-gradient(92deg,
+        rgba(255, 255, 255, 0.6) 16.51%,
+        rgba(255, 255, 255, 0.2) 94.64%);
     backdrop-filter: blur(5px);
     font-size: 16px;
   }
@@ -35,22 +42,10 @@ form {
   }
 
   .cs_brand_section {
-    padding-top: 930px;
+    padding-top: 750px;
   }
 
-  @media (max-width:1700px) {
-    .cs_brand_section {
-      padding-top: 800px;
-    }
-  }
-
-  @media (max-width:1600px) {
-    .cs_brand_section {
-      padding-top: 730px;
-    }
-  }
-
-  @media (max-width:991px) {
+  @media (max-width: 991px) {
     p {
       br {
         display: none;
@@ -62,7 +57,7 @@ form {
     }
   }
 
-  @media (max-width:575px) {
+  @media (max-width: 575px) {
     .cs_contact_form_wrapper {
       padding: 40px 20px;
     }
@@ -72,6 +67,13 @@ form {
         padding-left: 35px;
       }
     }
+  }
+}
+
+.cs_contact_1 {
+  .cs_contact_form_wrapper {
+    backdrop-filter: blur(0);
+    background-color: var(--white);
   }
 }
 
@@ -183,7 +185,8 @@ form {
 }
 
 .cs_dropdown {
-  right: 10px;
+  right: 24px;
+  bottom: 20px;
 }
 
 input,
@@ -191,7 +194,7 @@ textarea {
   color: rgba(20, 20, 20, 0.5);
 }
 
-cs_calculate_area,
+.cs_calculate_area,
 .cs_quantity_btn {
   color: rgba(20, 20, 20, 0.5);
 }

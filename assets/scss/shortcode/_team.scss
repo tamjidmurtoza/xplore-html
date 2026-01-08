@@ -1,15 +1,14 @@
-.cs_team.cs_style_1 {
+/*========================================================
+  15. Team
+==========================================================*/
+.cs_team_style_1 {
   overflow: hidden;
+
   img {
     width: 100%;
-    transition: transform 0.4s ease;
+    transition: transform 0.6s ease;
   }
-  .cs_team_info{
-    margin-top: 24px;
-    .cs_team_member_title{
-      margin-bottom: 8px;
-    }
-  }
+
   .cs_social {
     opacity: 0;
     visibility: hidden;
@@ -22,13 +21,21 @@
     padding: 55px 50px;
     z-index: 10;
     justify-content: space-around;
-    background: linear-gradient(0deg,#1d1d1d -23.78%,rgba(29, 29, 29, 0) 100%);
+    background: linear-gradient(0deg,
+        #1d1d1d -23.78%,
+        rgba(29, 29, 29, 0) 100%);
     font-size: 30px;
+
+    a:hover {
+      opacity: 0.75;
+    }
   }
+
   &:hover {
     img {
       transform: scale(1.05);
     }
+
     .cs_social {
       opacity: 1;
       visibility: visible;

@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-  5. Slider
-----------------------------------------------------------------*/
+/*=======================================================
+  08. Slider
+=========================================================*/
 .cs_slider {
   position: relative;
 }
@@ -13,7 +13,7 @@
   cursor: url(../img/drag.png) 16 9, ew-resize !important;
 }
 
-.slick-slide>div {
+.slick-slide > div {
   display: flex;
   flex-direction: column;
 }
@@ -32,6 +32,18 @@
       opacity: 1;
       visibility: visible;
     }
+  }
+}
+
+.cs_slider_gap_40 {
+  .slick-slide {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .slick-list {
+    margin-left: -20px;
+    margin-right: -20px;
   }
 }
 
